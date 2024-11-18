@@ -1,0 +1,145 @@
+{
+    "landingPage": {
+      "appTitle": "AREA",
+      "login": "Log In",
+      "signup": "Sign Up",
+      "welcomeMessage": "Welcome to AREA",
+      "description": "AREA is an automation app that connects various services to simplify your daily tasks. Inspired by the \"If This Then That\" (IFTTT) concept, AREA allows you to create \"applets\" that automate actions, such as sending messages or saving files, in response to specific events. It makes automation simple and accessible, helping you manage repetitive tasks for a more efficient day-to-day life.",
+      "actionReaction": "Action REAction",
+      "services": "Our Services",
+      "contributors": "Contributors"
+    },
+    "loginPage": {
+      "title": "Login",
+      "createAccount": "Create an account ?",
+      "diviser": "Or",
+      "username": "Username",
+      "password": "Password",
+      "loginButton": "Login",
+      "forgotPassword": "Forgot your password ?",
+      "signupPrompt": "Don't have an account? Sign up !",
+      "googlePrompt": "Continue with Google",
+      "xPrompt": "Continue with X",
+      "tiktokPrompt": "Continue with Tiktok",
+      "spotifyPrompt": "Continue with Spotify",
+      "discordPrompt": "Continue with Discord",
+      "githubPrompt" : "Continue with Github",
+      "emailPrompt": "Sign Up with your email"
+    },
+    "signupPage": {
+      "title": "Sign Up",
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "loginButton": "Log In",
+      "signupButton": "Sign Up",
+      "loginPrompt": "Already have an account? Log In !",
+      "errorMessage": "An error occurred: ",
+      "successMessage": "Signup successful !",
+      "signupFailed": "Sign up failed: "
+    },
+    "profileCard": {
+      "editButton": "Edit",
+      "cancelButton": "Cancel",
+      "submitButton": "Submit",
+      "usernameLabel": "Username",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "toggleLanguageButton": "Switch Language"
+    },
+    "profilePage": {
+      "title": "Profile",
+      "buttonTitle": "Back",
+      "passwordPrompt": "password",
+      "editProfile": "Edit Profile",
+      "saveChanges": "Save Changes",
+      "username": "Username",
+      "email": "Email"
+    },
+    "customNavBar": {
+      "appName": "AREA",
+      "serverSelectionTitle": "Select Server Location",
+      "helpTitle": "Help",
+      "helpText": "Welcome to Action-Reaction! This app allows you to automate tasks by creating customized workflows. Use the 'Create' page to set up Actions and REActions that will connect your services together. For example, you can automatically save email attachments to cloud storage or send reminders based on calendar events.",
+      "serverToolTip": "Server Configuration",
+      "closeButton": "Close",
+      "createButton": "Create",
+      "myAppletsButton": "My Applets",
+      "profileTooltip": "Profile",
+      "languageTooltip": "Language",
+      "helpTooltip": "Help",
+      "homeTooltip": "Home",
+      "logoutTooltip": "Log Out"
+    },
+    "forgotPasswordPage": {
+      "title": "Forgot Password",
+      "emailLabel": "Email address",
+      "passwordLabel": "Password",
+      "confirmPasswordLabel": "Confirm Password",
+      "submitButton": "Submit new Password",
+      "appName": "AREA"
+    },
+    "createActionPage": {
+      "pageTitle": "Create Action - REAction",
+      "backButton": "Back",
+      "ifThisTitle": "If This ...",
+      "thenThatTitle": "Then that ...",
+      "addButton": "Add"
+    },
+    "createReactionPage": {
+      "pageTitle": "Create Action - REAction",
+      "backButton": "Back",
+      "ifTitle": "If",
+      "newFollowerMessage": "You have a new follower.",
+      "thenTitle": "Then this ...",
+      "addButton": "Add"
+    },
+    "areaCreatedPage": {
+      "pageTitle": "Action REAction created !",
+      "backButton": "Back",
+      "ifTitle": "If",
+      "thenTitle": "Then",
+      "submitButton": "Submit",
+      "successTitle": "Success"
+    },
+    "chooseReactionPage": {
+      "pageTitle": "Choose a Reaction",
+      "backButton": "Back"
+    },
+    "chooseActionPage": {
+      "pageTitle": "Choose a Action",
+      "backButton": "Back"
+    },
+    "chooseServicePage": {
+      "pageTitle": "Choose your Service",
+      "backButton": "Back",
+      "google": "Google's services",
+      "tiktok": "TikTok's services",
+      "twitter": "Twitter's services",
+      "instagram": "Instagram's services",
+      "github": "Github's services",
+      "spotify": "Spotify's services",
+      "microsoft": "Microsoft's services",
+      "dropbox": "Dropbox's services"
+  },
+  "connectServicePage": {
+    "pageTitle": "Connect to Service",
+    "backButton": "Back",
+    "nextTitle": "Next",
+    "errorMessage": "Error, Could not launch the service link",
+    "buttonTitle": "Connect to the service"
+  },
+  "editAction": {
+    "pageTitle": "Edit your Action",
+    "backButton": "Back",
+    "saveButton": "Save"
+  },
+  "allApplets": {
+    "pageTitle": "All my Actions REActions",
+    "ifThatLabel": "If That:",
+    "thenThatLabel": "Then That:",
+    "createButtonTitle": "Create AREA"
+  }
+}
+  

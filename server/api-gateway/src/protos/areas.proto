@@ -1,0 +1,110 @@
+syntax = "proto3";
+
+package areas;
+
+service AreasService {
+  rpc CreateArea (AreaParams) returns (Empty) {}
+  rpc GetAvailableActionsPerService (Service) returns (AvailableAreas) {}
+  rpc GetAvailableReactionsPerService (Service) returns (AvailableAreas) {}
+  rpc GetServices (Empty) returns (Services) {}
+  rpc HandleGithubCommit (CommitInfo) returns (Empty) {}
+  rpc HandleGithubPullRequest (PullRequestInfo) returns (Empty) {}
+  rpc HandleGithubIssue (IssueInfo) returns (Empty) {}
+  rpc GetAreasByUser (UserId) returns (UserAreas) {}
+  rpc DeleteAllAreas (Empty) returns (Empty) {}
+  rpc GetServicesInfo (Empty) returns (ServicesJsonResponse) {}
+}
+
+message Empty {}
+
+message Services {
+  repeated Service services = 1;
+}
+
+message Service {
+  string name = 1;
+}
+
+message AreaParams {
+    string action = 1;
+    string reaction = 2;
+    string ownerId = 3;
+    string actionParams = 4;
+    string reactionParams = 5;
+}
+
+message AvailableAreas {
+  repeated AreaItem areas = 1;
+}
+
+message AreaItem {
+  string name = 1;
+  repeated string params = 2;
+  string enDescription = 3;
+  string frDescription = 4;
+}
+
+message CommitInfo {
+  string authorUsername = 1;
+  string authorEmail = 2;
+  string commitMessage = 3;
+  string commitUrl = 4;
+  string commitTimestamp = 5;
+  string repoName = 6;
+  string repoUrl = 7;
+}
+
+message UserId {
+  string userId = 1;
+}
+
+message UserAreas {
+  repeated UserArea areas = 1;
+}
+
+message UserArea {
+  string id = 1;
+  string ownerId = 2;
+  string action = 3;
+  string reaction = 4;
+  string actionParams = 5;
+  string reactionParams = 6;
+  string descriptionEnAction = 7;
+  string descriptionFrAction = 8;
+  string descriptionEnReaction = 9;
+  string descriptionFrReaction = 10;
+}
+
+message PullRequestInfo {
+  string title = 1;
+  string body = 2;
+  string repoName = 3;
+  string authorUsername = 4;
+  string url = 5;
+  string createdAt = 6;
+}
+
+message IssueInfo {
+  string title = 1;
+  string body = 2;
+  string repoName = 3;
+  string authorUsername = 4;
+  string url = 5;
+  string createdAt = 6;
+  repeated string issueLabels = 7;
+}
+
+message ServicesJsonResponse {
+  repeated ServiceInfo services = 1;
+}
+
+message ServiceInfo {
+  string name = 1;
+  repeated AreaInfo actions = 2;
+  repeated AreaInfo reactions = 3;
+}
+
+message AreaInfo {
+  string name = 1;
+  string description = 2;
+}

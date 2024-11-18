@@ -1,0 +1,157 @@
+{
+    "landingPage": {
+      "appTitle": "AREA",
+      "login": "Se connecter",
+      "signup": "S'inscrire",
+      "welcomeMessage": "Bienvenue sur area",
+      "services": "Nos Services",
+      "description": "AREA est une application d'automatisation qui connecte divers services pour simplifier vos tâches quotidiennes. Inspirée du concept \"If This Then That\" (IFTTT), AREA vous permet de créer des \"applets\" qui automatisent des actions, comme envoyer un message ou sauvegarder des fichiers, en réponse à des événements. Elle rend l'automatisation simple et accessible, facilitant la gestion de tâches répétitives pour un quotidien plus efficace.",
+      "actionReaction": "Action REAction",
+      "contributors": "Contributeurs"
+    },
+    "loginPage": {
+      "title": "Connexion",
+      "createAccount": "Crée un compte ?",
+      "diviser" : "Ou",
+      "username" : "Nom d'utilisateur",
+      "password": "Mot de passe",
+      "loginButton": "Se connecter",
+      "forgotPassword": "Mot de passe oublié ?",
+      "signupPrompt": "Pas de compte ? Inscrivez-vous !",
+      "googlePrompt": "Continuer avec Google",
+      "xPrompt": "Continuer avec X",
+      "tiktokPrompt": "Continuer avec Tiktok",
+      "spotifyPrompt": "Continuer avec Spotify",
+      "discordPrompt": "Continuer avec Discord",
+      "githubPrompt" : "Continuer avec Github"
+    },
+    "signupPage": {
+      "title": "Inscription",
+      "username": "Nom d'utilisateur",
+      "email": "Email",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "loginButton": "Connexion",
+      "signupButton": "S'inscrire",
+      "loginPrompt": "Déjà un compte ? Connectez-vous !",
+      "errorMessage": "Une erreur s'est produite : ",
+      "successMessage": "Inscription réussie !",
+      "signupFailed": "L'inscription a échoué : "
+    },
+  "profileCard": {
+      "editButton": "Modifier",
+      "cancelButton": "Annuler",
+      "submitButton": "Soumettre",
+      "usernameLabel": "Nom d'utilisateur",
+      "emailLabel": "Email",
+      "passwordLabel": "Mot de passe",
+      "avatarLabel": "Avatar",
+      "toggleLanguageButton": "Changer de langue"
+    },
+    "homePage": {
+      "welcome": "Bienvenue sur la page d'accueil",
+      "profile": "Profil",
+      "settings": "Paramètres",
+      "logout": "Déconnexion",
+      "services": "Nos Services",
+      "contributors": "Contributeurs",
+      "text": "AREA est une application d'automatisation qui connecte divers services pour simplifier vos tâches quotidiennes. Inspirée du concept \"If This Then That\" (IFTTT), AREA vous permet de créer des \"applets\" qui automatisent des actions, comme envoyer un message ou sauvegarder des fichiers, en réponse à des événements. Elle rend l'automatisation simple et accessible, facilitant la gestion de tâches répétitives pour un quotidien plus efficace."
+    },
+    "profilePage": {
+      "title": "Profil",
+      "buttonTitle": "Retour",
+      "passwordPrompt": "Mot de passe",
+      "editProfile": "Modifier le profil",
+      "saveChanges": "Sauvegarder les modifications",
+      "username": "Nom d'utilisateur",
+      "email": "Email"
+    },
+    "customNavBar": {
+      "appName": "AREA",
+      "serverSelectionTitle": "Sélection de la Localisation du Serveur",
+      "helpTitle": "Aide",
+      "helpText": "Bienvenue dans Action-Reaction ! Cette application vous permet d'automatiser des tâches en créant des workflows personnalisés. Utilisez la page Créer pour configurer des actions et des REActions qui relieront vos services entre eux. Par exemple, vous pouvez enregistrer automatiquement les pièces jointes d'un e-mail dans le stockage cloud ou envoyer des rappels en fonction des événements du calendrier.",
+      "serverToolTip": "Configuration du Serveur",
+      "closeButton": "Fermer",
+      "createButton": "Créer",
+      "myAppletsButton": "Mes Applets",
+      "profileTooltip": "Profil",
+      "languageTooltip": "Langue",
+      "helpTooltip": "Aide",
+      "homeTooltip": "Accueil",
+      "logoutTooltip": "Déconnexion"
+  },
+  "forgotPasswordPage": {
+    "title": "Mot de passe oublié",
+    "emailLabel": "Adresse e-mail",
+    "passwordLabel": "Mot de passe",
+    "confirmPasswordLabel": "Confirmer le mot de passe",
+    "submitButton": "Soumettre le nouveau mot de passe"
+  },
+  "createActionPage": {
+    "pageTitle": "Créer une Action - REAction",
+    "backButton": "Retour",
+    "ifThisTitle": "Si ceci ...",
+    "thenThatTitle": "Alors cela ...",
+    "addButton": "Ajouter"
+  },
+  "createReactionPage": {
+    "pageTitle": "Créer une Action - REAction",
+    "backButton": "Retour",
+    "ifTitle": "Si",
+    "thenTitle": "Alors ceci ...",
+    "addButton": "Ajouter"
+  },
+  "areaCreatedPage": {
+    "pageTitle": "Action REAction crée !",
+    "backButton": "Retour",
+    "ifTitle": "Si",
+    "thenTitle": "Alors",
+    "submitButton": "Soumettre",
+    "successTitle": "Succès"
+  },
+  "chooseReactionPage": {
+      "pageTitle": "Choisis une Réaction",
+      "backButton": "Retour"
+  },
+  "chooseActionPage": {
+    "pageTitle": "Choisis une Action",
+    "backButton": "Retour"
+  },
+  "chooseEventPage": {
+    "pageTitle": "Choisir un événement",
+    "backButton": "Retour"
+  },
+  "chooseServicePage": {
+    "pageTitle": "Choisissez votre service",
+    "backButton": "Retour",
+    "services": {
+      "google": "Services de Google",
+      "tiktok": "Services de TikTok",
+      "twitter": "Services de Twitter",
+      "instagram": "Services d'Instagram",
+      "github": "Services de Github",
+      "spotify": "Services de Spotify",
+      "microsoft": "Services de Microsoft",
+      "dropbox": "Services de Dropbox"
+    }
+  },
+  "connectServicePage": {
+    "pageTitle": "Connexion au Service:",
+    "backButton": "Retour",
+    "nextTitle": "Suivant",
+    "errorMessage": "Erreur, lien de connexion non ouvrable.",
+    "buttonTitle": "Connexion au Service"
+  },
+  "editAction": {
+    "pageTitle": "Modifier son Action",
+    "backButton": "Retour",
+    "saveButton": "Sauvegarder"
+  },
+  "allApplets": {
+    "pageTitle": "Mes Actions Reactions",
+    "ifThatLabel": "Si",
+    "ThenThatLabel": "Alors",
+    "createButtonTitle": "Créer une AREA"
+  }
+}

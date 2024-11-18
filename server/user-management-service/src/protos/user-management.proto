@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package userManagement;
+
+service UserManagementService {
+  rpc Register (RegisterParams) returns (AccessToken) {}
+  rpc Login (LoginParams) returns (AccessToken) {}
+  rpc LoginWithProvider (LoginProviderParams) returns (AccessToken) {}
+  rpc GetUserInfo (UserId) returns (UserInfo) {}
+  rpc DeleteUser (UserId) returns (Empty) {}
+  rpc Logout (Empty) returns (Empty) {}
+}
+
+message Empty {}
+
+message RegisterParams {
+  string email = 1;
+  string username = 2;
+  string password = 3;
+  string confirmPassword = 4;
+}
+
+message LoginParams {
+  string username = 1;
+  string password = 2;
+}
+
+message LoginProviderParams {
+  string username = 1;
+  string email = 2;
+  string provider = 3;
+}
+
+message AccessToken {
+  string accessToken = 1;
+  string userId = 2;
+}
+
+message UserId {
+  string userId = 1;
+}
+
+message UserInfo {
+  string email = 1;
+  string username = 2;
+  string password = 3;
+  string provider = 4;
+  string pictureURL = 5;
+}
+

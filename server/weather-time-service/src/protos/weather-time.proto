@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package weathertime;
+
+service WeatherTimeService {
+    rpc GetTimeInParis (Empty) returns (TimeInParis) {}
+    rpc GetWeatherInParis (Empty) returns (WeatherInParis) {}
+}
+
+message Empty {}
+
+message TimeInParis {
+    string time = 1;
+}
+
+message WeatherInParis {
+    string weather = 1;
+}

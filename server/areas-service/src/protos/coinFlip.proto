@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package coinFlip;
+
+service CoinFlipService {
+  rpc CheckHeads (Empty) returns (IsCheckTrue) {}
+  rpc CheckTails (Empty) returns (IsCheckTrue) {}
+}
+
+message Empty {}
+
+message IsCheckTrue {
+  bool check = 0;
+}

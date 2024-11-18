@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package islamicprayer;
+
+service IslamicPrayerService {
+    rpc GetFajrTime (Empty) returns (IslamicPrayerFajrTime) {}
+    rpc GetTime (Empty) returns (IslamicPrayerTime) {}
+    rpc GetTimestamp (Empty) returns (IslamicPrayerTime) {}
+    rpc GetDate (Empty) returns (IslamicPrayerDate) {}
+}
+
+message Empty {}
+
+message IslamicPrayerFajrTime {
+    string fajr = 1;
+}
+
+message IslamicPrayerTime {
+    string time = 1;
+}
+
+message IslamicPrayerDate {
+    string date = 1;
+}

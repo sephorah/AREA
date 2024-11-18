@@ -1,0 +1,137 @@
+{
+    "LandingPage": {
+        "title": "What is AREA ?",
+        "description": "AREA is an automation app that connects various services to simplify your daily tasks. Inspired by the \"If This Then That\" (IFTTT) concept, AREA allows you to create \"applets\" that automate actions, such as sending messages or saving files, in response to specific events. It makes automation simple and accessible, helping you manage repetitive tasks for a more efficient day-to-day life.",
+        "contributors": "Contributors",
+        "services": "Services"
+    },
+    "LogInForm": {
+        "title": "Login",
+        "username": "Username",
+        "password": "Password",
+        "buttonLogIn": "Login",
+        "buttonForgotPassword": "Forgot your password?",
+        "usernameRequired": "Username required",
+        "passwordRequired": "Password required"
+    },
+    "LogInOauth": {
+        "google": "Continue with Google",
+        "spotify": "Continue with Spotify",
+        "discord": "Continue with Discord",
+        "github": "Continue with Github"
+    },
+    "CreateAnAccount": {
+        "question": "You don't have an account ?",
+        "signUp": "Sign up here"
+    },
+    "Line": {
+        "or": "Or"
+    },
+    "ForgotPassword": {
+        "question": "Forgot your password ?",
+        "username": "Username",
+        "buttonResetPassword": "Reset password",
+        "usernameRequired": "Username required"
+    },
+    "CreateAnAccountForm": {
+        "title": "Sign up",
+        "username": "Username",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "button": "Create an account",
+        "usernameRequired": "Username required",
+        "emailRequired": "Email required",
+        "emailValide": "Enter a valided email",
+        "passwordRequired": "Password required",
+        "confirmPasswordRequired": "Confirm password required"
+    },
+   "Navbar": {
+        "pageLogin": "Create an account",
+        "pageRegister": "Already have an account?",
+        "english": "English",
+        "french": "French",
+        "login": "Log in",
+        "register": "Sign up",
+        "buttonAdmin": "Administrator actions",
+        "download": "Download App",
+        "create": "Create",
+        "areas-created": "My Applets",
+        "helpText": "Welcome to Action-Reaction! This app allows you to automate tasks by creating customized workflows.\nUse the 'Create' page to set up Actions and REActions that will connect your services together.\nFor example, you can automatically save email attachments to cloud storage or send reminders based on calendar events.",
+        "closeText": "Close"
+    },
+    "CreateArea": {
+        "title": "Create Action - REAction",
+        "if this": "If this",
+        "then that": "Then that",
+        "if": "If",
+        "then": "Then",
+        "submit": "Submit",
+        "your-areas": "Your Areas",
+        "successful": "Your AREA has been successfully created",
+        "failed": "Your AREA has not been created"
+    },
+    "DivActionReaction": {
+        "title": "+ add"
+    },
+    "ButtonBack": {
+        "title": "Back"
+    },
+    "ButtonNewArea": {
+        "title": "New AREA"
+    },
+    "ChooseService": {
+        "title": "Choose your Service"
+    },
+    "ChooseAction": {
+        "title": "Choose your Action",
+        "connectButton": "Connect"
+    },
+    "ChooseReaction": {
+        "title": "Choose your Reaction",
+        "connectButton": "Connect"
+    },
+    "Profile": {
+        "title": "My Profile",
+        "name": "Name",
+        "email": "Email",
+        "password": "Password",
+        "button": "Edit",
+        "buttonFinish": "Finish",
+        "logout": "Logout"
+    },
+    "AreasCreated": {
+        "title": "All my Actions REActions",
+        "if": "If that",
+        "then": "Then that"
+    },
+    "HandleEditTitle": {
+        "title": "New AREA Title :",
+        "label": "Enter new title",
+        "buttonFinish": "Finish",
+        "buttonBack": "Back"
+    },
+    "AdminActions": {
+        "details": "Details",
+        "deleteUser": "Delete User",
+        "editUser": "Edit User Profile",
+        "deleteTitle": "Do you really want to suppress the user ",
+        "detailsTitle": "Details of user",
+        "detailsName": "Name: ",
+        "detailsEmail": "Email: ",
+        "detailsNumberArea": "Number of AREA: ",
+        "detailsNumberServices": "Services connected: ",
+        "editNameButton": "Edit name",
+        "editNameTitle": "Enter new name",
+        "editEmailButton": "Edit email",
+        "editEmailTitle": "Enter new email",
+        "yesButton": "Yes",
+        "noButton": "No",
+        "finishButton": "Finish",
+        "backButton": "Back"
+    },
+    "setParams": {
+        "buttonFinish": "Finish",
+        "errorMessage": "Please fill out all required fields."
+    }
+}

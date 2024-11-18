@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package reddit;
+
+service RedditService {
+  rpc RequestAccess (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessToken (RequestAccessTokenParams) returns (RequestAccessTokenSent) {}
+  rpc CheckUserSavedPosts (Empty) returns (NewSavedPosts) {}
+  rpc CheckUserUpvotedPosts (Empty) returns (NewUpDownvotedPosts) {}
+  rpc CheckUserDownvotedPosts (Empty) returns (NewUpDownvotedPosts) {}
+  rpc SubmitText (SubmitTextParams) returns (Empty) {}
+  rpc SubmitLink (SubmitLinkParams) returns (Empty) {}
+}
+
+message Empty {}
+
+message RequestAuthSent {
+  string url = 1;
+}
+
+message RequestAccessTokenParams {
+  string code = 1;
+}
+
+message RequestAccessTokenSent {
+  string accessToken = 1;
+  string tokenType = 2;
+}
+
+message NewSavedPosts {
+  repeated NewSavedPost newSavedPosts = 1;
+}
+
+message NewSavedPost {
+  string titlePost = 1;
+  string postURL = 2;
+  string subreddit = 3;
+  string postedAt = 4;
+}
+
+message NewUpDownvotedPosts {
+  repeated NewUpDownvotedPost newUpDownvotedPosts = 1;
+}
+
+message NewUpDownvotedPost {
+  string titlePost = 1;
+  string postURL = 2;
+  string subreddit = 3;
+  string postedAt = 4;
+}
+
+message SubmitTextParams {
+  string subreddit = 1;
+  string title = 2;
+  string text = 3;
+}
+
+message SubmitLinkParams {
+  string subreddit = 1;
+  string title = 2;
+  string text = 3;
+  string url = 4;
+}

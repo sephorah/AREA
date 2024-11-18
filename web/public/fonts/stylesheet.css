@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Murecho';
+    src: url('Murecho-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MurechoBold';
+    src: url('Murecho-Bold.ttf') format('truetype');
+}

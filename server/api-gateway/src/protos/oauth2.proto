@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package oauth2;
+
+service OAuth2Service {
+  rpc RequestAuthorizationGoogle (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessTokenGoogle (RequestAccessTokenParams) returns (RequestAccessTokenSent) {}
+  // rpc RequestAccessGoogleGmail (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessSpotify (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessTokenSpotify (RequestAccessTokenParams) returns (RequestAccessTokenSent) {}
+  rpc RequestAccessDiscord (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessTokenDiscord (RequestAccessTokenParams) returns (RequestAccessTokenSent) {}
+  rpc LoginWithDiscord (Empty) returns (AccessToken) {}
+  rpc LoginWithGoogle (Empty) returns (AccessToken) {}
+  rpc LoginWithSpotify (Empty) returns (AccessToken) {}
+  rpc RequestAccessGithub (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessTokenGithub (RequestAccessTokenParams) returns (RequestAccessTokenSent) {}
+  rpc LoginWithGithub (Empty) returns (AccessToken) {}
+  rpc RequestAccessReddit (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessTokenReddit (RequestAccessTokenParams) returns (RequestAccessTokenSent) {}
+  rpc RequestAccessNotion (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessTokenNotion (RequestAccessTokenParams) returns (RequestAccessTokenSent) {}
+}
+
+message Empty {}
+
+message RequestAuthSent {
+  string url = 1;
+}
+
+message RequestAccessTokenParams {
+  string code = 1;
+}
+
+message RequestAccessTokenSent {
+  string accessToken = 1;
+  string tokenType = 2;
+}
+
+message AccessToken {
+  string accessToken = 1;
+  string userId = 2;
+}

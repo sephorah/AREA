@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+package spotify;
+
+service SpotifyService {
+  rpc RequestAccess (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessToken (RequestAccessTokenParams) returns (RequestAccessTokenSent) {}
+  rpc CheckUserSavedTracks (Empty) returns (NewSavedTracks) {}
+  rpc GetUserSavedTracks (Empty) returns (Empty) {}
+  rpc LoginWithSpotify (Empty) returns (AccessToken) {}
+  rpc CheckUserSavedShows (Empty) returns (NewSavedShows) {}
+  rpc GetUserSavedShows (Empty) returns (Empty) {}
+  rpc CheckUserSavedAlbums (Empty) returns (NewSavedAlbums) {}
+  rpc GetUserSavedAlbums (Empty) returns (Empty) {}
+  rpc StartResumePlayback (Empty) returns (Empty) {}
+  rpc PausePlayback (Empty) returns (Empty) {}
+  rpc SkipToNextMusic (Empty) returns (Empty) {}
+  rpc RefreshToken (Empty) returns (Empty) {}
+}
+
+message Empty {}
+
+message RequestAuthSent {
+  string url = 1;
+}
+
+message RequestAccessTokenParams {
+  string code = 1;
+}
+
+message RequestAccessTokenSent {
+  string accessToken = 1;
+  string tokenType = 2;
+}
+
+message NewSavedTracks {
+  repeated NewSavedTrack newSavedTracks = 1;
+}
+
+message NewSavedTrack {
+  string trackName = 1;
+  string trackURL = 2;
+  string artistName = 3;
+  string albumName = 4;
+  string savedAt = 5;
+  string trackId = 6;
+  string trackIsrc = 7;
+}
+
+message AccessToken {
+  string accessToken = 1;
+  string userId = 2;
+}
+
+message NewSavedShows {
+  repeated NewSavedShow newSavedShows = 1;
+}
+
+message NewSavedShow {
+  string name = 1;
+  string description = 2;
+  string publisher = 3;
+  string url = 4;
+  string savedAt = 5;
+}
+
+message NewSavedAlbums {
+  repeated NewSavedAlbum newSavedAlbums = 1;
+}
+
+message NewSavedAlbum {
+  string name = 1;
+  string artists = 2;
+  string url = 3;
+  string savedAt = 4;
+}

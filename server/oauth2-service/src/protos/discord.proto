@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package discord;
+
+service DiscordService {
+  rpc RequestAccess (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessToken (RequestAccessTokenParams) returns (RequestAccessTokenSent) {}
+  rpc LoginWithDiscord (Empty) returns (AccessToken) {}
+  rpc GetGuildsInfo (NameOfGuild) returns (DiscordRolesGuild) {}
+  rpc GetUsername (Empty) returns (DiscordUsername) {}
+  rpc GetServicesConnected (Empty) returns (DiscordServicesList) {}
+}
+
+message Empty {}
+
+message RequestAuthSent {
+  string url = 1;
+}
+
+message RequestAccessTokenParams {
+  string code = 1;
+}
+
+message RequestAccessTokenSent {
+  string accessToken = 1;
+  string tokenType = 2;
+}
+
+message AccessToken {
+  string accessToken = 1;
+  string userId = 2;
+}
+
+message NameOfGuild {
+  string name = 1;
+}
+
+message DiscordRolesGuild {
+  repeated string roles = 1;
+}
+
+message DiscordUsername {
+  string username = 1;
+}
+
+message DiscordServicesList {
+  repeated string name = 1;
+}

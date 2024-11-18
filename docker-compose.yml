@@ -1,0 +1,284 @@
+version: '3.8'
+
+services:
+  server:
+    container_name: server
+    build:
+      context: ./server/api-gateway
+    networks:
+      - server-network
+    ports:
+      - "${SERVER_PORT}:${SERVER_PORT}"
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/api-gateway
+    
+  server-secondary:
+    container_name: server-secondary
+    build:
+      context: ./server/api-gateway
+    networks:
+      - server-network
+    ports:
+      - "8082:8080"
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/api-gateway   
+
+  user-management-database:
+    image: 'postgres:alpine'
+    container_name: user-management-database
+    ports:
+      - "${USER_MANAGEMENT_DB_PORT}:${USER_MANAGEMENT_DB_PORT}"
+    environment:
+        - POSTGRES_USER=${USER_MANAGEMENT_DB_USER}
+        - POSTGRES_PASSWORD=${USER_MANAGEMENT_DB_PASSWORD}
+    env_file:
+      - .env
+    networks:
+      - server-network
+    volumes:
+      - user_management_database_volume:/var/lib/postgresql/data/
+    restart: always
+
+  user-management-service:
+    container_name: user-management-service
+    build:
+      context: ./server/user-management-service/
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://${USER_MANAGEMENT_DB_USER}:${USER_MANAGEMENT_DB_PASSWORD}@${USER_MANAGEMENT_DB_HOST}:${USER_MANAGEMENT_DB_PORT}/${USER_MANAGEMENT_DB_NAME}
+    ports:
+      - "50053:50053"
+    networks:
+      - server-network
+    depends_on:
+      - user-management-database
+    restart: always
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/user-management-service
+
+  google-service:
+    container_name: google-service
+    build:
+      context: ./server/google-service/
+    env_file:
+      - .env
+    ports:
+      - "50051:50051"
+    networks:
+      - server-network
+    restart: always
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/google-service
+
+  oauth2-service:
+    container_name: oauth2-service
+    build:  
+      context: ./server/oauth2-service/
+    env_file:
+      - .env
+    ports:
+      - "50052:50052"
+    networks:
+      - server-network
+    restart: always
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/oauth2-service
+
+  spotify-service:
+    container_name: spotify-service
+    build:
+      context: ./server/spotify-service/
+    env_file:
+      - .env
+    ports:
+      - "50054:50054"
+    networks:
+      - server-network
+    restart: always
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/spotify-service
+
+  github-service:
+    container_name: github-service
+    build:
+      context: ./server/github-service/
+    env_file:
+      - .env
+    ports:
+      - "50058:50058"
+    networks:
+      - server-network
+    restart: always
+
+  areas-service:
+    container_name: areas-service
+    build:
+      context: ./server/areas-service/
+    env_file:
+      - .env
+    ports:
+      - "50055:50055"
+    networks:
+      - server-network
+    restart: always
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/areas-service
+
+  discord-service:
+    container_name: discord-service
+    build:
+      context: ./server/discord-service/
+    env_file:
+      - .env
+    ports:
+      - "50056:50056"
+    networks:
+      - server-network
+    restart: always
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/discord-service
+
+  notion-service:
+    container_name: notion-service
+    build:
+      context: ./server/notion-service/
+    env_file:
+      - .env
+    ports:
+      - "50057:50057"
+    networks:
+      - server-network
+    restart: always
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/notion-service
+
+  weather-time-service:
+    container_name: weather-time-service
+    build:
+      context: ./server/weather-time-service/
+    ports:
+      - "50060:50060"
+    networks:
+      - server-network
+    restart: always
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/weather-time-service
+
+  islamic-prayer-service:
+    container_name: islamic-prayer-service
+    build:
+      context: ./server/islamic-prayer-service/
+    ports:
+      - "50061:50061"
+    networks:
+      - server-network
+    restart: always
+    develop:
+      watch:
+        - action: rebuild
+          path: ./server/islamic-prayer-service
+    
+  areas-database:
+    image: 'postgres:alpine'
+    container_name: areas-database
+    environment:
+        - POSTGRES_USER=${AREAS_DB_USER}
+        - POSTGRES_PASSWORD=${AREAS_DB_PASSWORD}
+        - PGPORT=${AREAS_DB_PORT}
+        - POSTGRES_DB=${AREAS_DB_NAME}
+    env_file:
+      - .env
+    ports:
+      - "${AREAS_DB_PORT}:${AREAS_DB_PORT}"
+    networks:
+      - server-network
+    volumes:
+      - areas_database_volume:/var/lib/postgresql/data/
+    restart: always
+
+  redis:
+    image: 'redis:alpine'
+    container_name: redis
+    ports:
+      - '6379:6379'
+    networks:
+      - server-network
+    restart: always
+
+  reddit-service:
+    container_name: reddit-service
+    build:
+      context: ./server/reddit-service/
+    env_file:
+      - .env
+    ports:
+      - "50059:50059"
+    networks:
+      - server-network
+    restart: always
+
+  coin-flip-service:
+    container_name: coin-flip-service
+    build:
+      context: ./server/coin-flip-service/
+    env_file:
+      - .env
+    ports:
+      - "50062:50062"
+    networks:
+      - server-network
+    restart: always
+
+  client_mobile:
+    container_name: client_mobile
+    build: 
+      context: ./mobile/
+    volumes:
+      - apk_volume:/home/ apk
+
+  client_web:
+    container_name: client_web
+    build:
+      context: ./web/
+    restart: always
+    depends_on:
+      - server
+      - client_mobile
+    volumes:
+      - apk_volume:/home/apk
+    develop:
+      watch:
+        - action: rebuild
+          path: ./web
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+
+volumes:
+  user_management_database_volume:
+  areas_database_volume:
+  apk_volume:
+
+networks:
+  server-network:
+    driver: bridge

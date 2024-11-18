@@ -1,0 +1,138 @@
+{
+    "LandingPage": {
+        "title": "Qu'est ce qu'AREA ?",
+        "description": "AREA est une application d'automatisation qui connecte divers services pour simplifier vos tâches quotidiennes. Inspirée du concept \"If This Then That\" (IFTTT), AREA vous permet de créer des \"applets\" qui automatisent des actions, comme envoyer un message ou sauvegarder des fichiers, en réponse à des événements. Elle rend l'automatisation simple et accessible, facilitant la gestion de tâches répétitives pour un quotidien plus efficace.",
+        "contributors": "Contribuants",
+        "services": "Services"
+    },
+    "LogInForm": {
+        "title": "Connexion",
+        "username": "Nom d'utilisateur",
+        "password": "Mot de passe",
+        "buttonLogIn": "Se connecter",
+        "buttonForgotPassword": "Mot de passe oublié ?",
+        "usernameRequired": "Nom d'utilisateur requis",
+        "passwordRequired": "Mot de passe requis"
+    },
+    "LogInOauth": {
+       "google": "Continuer avec Google",
+        "spotify": "Continuer avec Spotify",
+        "discord": "Continuer avec Discord",
+        "github": "Continuer avec Github"
+    },
+    "CreateAnAccount": {
+        "question": "Vous n'avez pas de compte ?",
+        "signUp": "Inscrivez-vous ici"
+    },
+    "Line": {
+        "or": "Ou"
+    },
+    "ForgotPassword": {
+        "question": "Mot de passe oublié ?",
+        "username": "Nom d'utilisateur",
+        "buttonResetPassword": "Réinitialiser le mot de passe",
+        "usernameRequired": "Nom d'utilisateur requis"
+    },
+    "PageResetPassword": {},
+    "CreateAnAccountForm": {
+        "title": "Inscription",
+        "username": "Nom d'utilisateur",
+        "email": "E-mail",
+        "password": "Mot de passe",
+        "confirmPassword": "Confirmer le mot de passe",
+        "button": "Créer un compte",
+        "usernameRequired": "Nom d'utilisateur requis",
+        "emailValide": "Enter un e-mail valide",
+        "emailRequired": "E-mail requis",
+        "passwordRequired": "Mot de passe requis",
+        "confirmPasswordRequired": "Confirmation du mot de passe requis"
+    },
+    "Navbar": {
+        "pageLogin": "Créer un compte",
+        "pageRegister": "Vous avez déjà un compte ?",
+        "english": "Anglais",
+        "french": "Francais",
+        "login": "Se connecter",
+        "register": "S'inscrire",
+        "adminButton": "Actions de l'administrateur",
+        "download": "Télécharger l'App",
+        "create": "Créer",
+        "areas-created": "Mes Applets",
+        "helpText": "Bienvenue sur Action-Réaction ! Cette application vous permet d'automatiser des tâches en créant des workflows personnalisés.\nUtilisez la page 'Créer' pour configurer des Actions et REActions qui relieront vos services ensemble.\nPar exemple, vous pouvez automatiquement enregistrer des pièces jointes d'email dans le stockage cloud ou envoyer des rappels en fonction des événements du calendrier.",
+        "closeText": "Fermer"
+    },
+    "CreateArea": {
+        "title": "Créez votre Action-REAction:",
+        "if this": "Si ça",
+        "then that": "Alors cela",
+        "if": "Si",
+        "then": "Alors",
+        "submit": "Soumettre",
+        "your-areas": "Vos Areas",
+        "successful": "Votre AREA a été créé avec succès",
+        "failed": "Votre AREA n'a pas été créer"
+    },
+    "DivActionReaction": {
+        "title": "+ ajoutez"
+    },
+    "ButtonBack": {
+        "title": "Retour"
+    },
+    "ButtonNewArea": {
+        "title": "Nouvelle AREA"
+    },
+    "ChooseService": {
+        "title": "Choisissez votre service:"
+    },
+    "ChooseAction": {
+        "title": "Choisissez votre trigger:",
+        "connectButton": "Connexion"
+    },
+    "ChooseReaction": {
+        "title": "Choisissez votre reaction:",
+        "connectButton": "Connexion"
+    },
+    "Profile": {
+        "title": "Détails de mon profil:",
+        "name": "Nom d'utilisateur",
+        "email": "E-mail",
+        "password": "Mot de passe",
+        "button": "Modifier",
+        "buttonFinish": "Terminer",
+        "logout": "Deconnexion"
+    },
+    "AreasCreated": {
+        "title": "Toutes vos Actions REActions:",
+        "if": "Si ceci",
+        "then": "Alors cela"
+    },
+    "HandleEditTitle": {
+        "title": "Nouveau titre de l'AREA:",
+        "label": "Entrez le nouveau titre",
+        "buttonFinish": "Terminer",
+        "buttonBack": "Retour"
+    },
+    "AdminActions": {
+        "details": "Détails",
+        "deleteUser": "Supprimer l'utilisateur",
+        "editUser": "Modifier le profil de l'utilisateur",
+        "deleteTitle": "Voulez-vous vraiment supprimer l'utilisateur ",
+        "detailsTitle": "Détails de l'utilisateur",
+        "detailsName": "Nom: ",
+        "detailsEmail": "Email: ",
+        "detailsNumberArea": "Nombre de AREA: ",
+        "detailsNumberServices": "Services connectés: ",
+        "editNameButton": "Modifier le nom",
+        "editNameTitle": "Entrez un nouveau nom",
+        "editEmailButton": "Modifier l'email",
+        "editEmailTitle": "Entrez un nouvel email",
+        "yesButton": "Oui",
+        "noButton": "Non",
+        "finishButton": "Terminer",
+        "backButton": "Retour"
+    },
+    "setParams": {
+        "buttonFinish": "Terminer",
+        "errorMessage": "Veuillez remplir tous les champs obligatoires."
+    }
+}

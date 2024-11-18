@@ -1,0 +1,108 @@
+syntax = "proto3";
+
+package notion;
+
+service NotionService {
+  rpc RequestAccess (Empty) returns (RequestAuthSent) {}
+  rpc RequestAccessToken (RequestAccessTokenParams) returns (RequestAccessTokenSent) {}
+  rpc PostNewBlock (NotionTitleBlock) returns (Empty) {}
+  rpc GetNameUser (Empty) returns (NotionNameUser) {}
+  rpc GetEmailUser (Empty) returns (NotionEmailUser) {}
+  rpc GetOwnerName (Empty) returns (NotionNameUser) {}
+  rpc GetLastEditedBlock (NotionBlockId) returns (NotionLastEditedBlock) {}
+  rpc GetChildrenBlock (NotionBlockId) returns (NotionChildrenBlock) {}
+  rpc GetLastEditedPage (NotionPageId) returns (NotionLastEditedPage) {}
+  rpc GetLastEditedDatabase (NotionDatabaseId) returns (NotionLastEditedDatabase) {}
+  rpc GetCommentsOnBlock (NotionBlockId) returns (NotionCommentsInfo) {}
+  rpc PostNewComment (NotionNewComment) returns (Empty) {}
+  rpc UpdateBlock (NotionUpdateBlock) returns (Empty) {}
+  rpc DeleteBlock (NotionBlockId) returns (Empty) {}
+  rpc CreatePage (NotionCreatePage) returns (Empty) {}
+  rpc CreateDatabase (NotionCreatePage) returns (Empty) {}
+  rpc UpdateDatabaseTitle (NotionUpdateDatabase) returns (Empty) {}
+}
+
+message Empty {}
+
+message RequestAuthSent {
+  string url = 1;
+}
+
+message RequestAccessTokenParams {
+  string code = 1;
+}
+
+message RequestAccessTokenSent {
+  string accessToken = 1;
+  string tokenType = 2;
+}
+
+message NotionTitleBlock {
+  string text = 1;
+  string pageId = 2;
+}
+
+message NotionNameUser {
+  string name = 1;
+}
+
+message NotionEmailUser {
+  string email = 1;
+}
+
+message NotionBlockId {
+  string blockId = 1;
+}
+
+message NotionLastEditedBlock {
+  string date = 1;
+  string editorsName = 2;
+}
+
+message NotionChildrenBlock {
+  string childrenNbr = 1;
+  string editorsName = 2;
+}
+
+message NotionPageId {
+  string pageId = 1;
+}
+
+message NotionLastEditedPage {
+  string date = 1;
+  string editorsName = 2;
+}
+
+message NotionDatabaseId {
+  string databaseId = 1;
+}
+
+message NotionLastEditedDatabase {
+  string date = 1;
+  string editorsName = 2;
+}
+
+message NotionCommentsInfo {
+  string nbrOfComments = 1;
+  string blockId = 2;
+}
+
+message NotionNewComment {
+  string pageId = 1;
+  string text = 2;
+}
+
+message NotionUpdateBlock {
+  string blockId = 1;
+  string text = 2;
+}
+
+message NotionCreatePage {
+  string pageId = 1;
+  string title = 2;
+}
+
+message NotionUpdateDatabase {
+  string databaseId = 1;
+  string title = 2;
+}
