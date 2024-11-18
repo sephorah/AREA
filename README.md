@@ -38,7 +38,7 @@ Mobile Client: Allows users to interact with the platform on mobile devices, mir
 
 ## Set up the project environment
 1. Create a .env file at the root, and for each microservice
-2. Set the environment variables as in the .env.example, at the root and for each microservice
+2. For each .env.example, set the environment variables in a .env file
 
 ## Getting Started
 Run the docker-compose to start building and running the project.
