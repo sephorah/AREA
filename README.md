@@ -10,16 +10,6 @@ Application Server: Central hub for business logic and service integrations.
 Web Client: Provides a browser-based interface for users to create, manage, and interact with AREA workflows.
 Mobile Client: Allows users to interact with the platform on mobile devices, mirroring the functionality of the web client.
 
-## Team responsibilities
-
-### Backend
-Sephorah and Baptiste were responsible for developing the application server, handling user management, authentication, service integration, and all core functionalities.
-
-### Mobile client
-Yasmine has built the mobile application, ensuring user-friendly interaction with the application server and AREA setup on mobile devices.
-
-### Web client
-Ismaïel has worked on the web client, providing users with a responsive and accessible interface to manage their AREAs.
 
 ## Preview
 
@@ -62,3 +52,14 @@ Then, you will need to set up ngrok by running the following commands:
 ngrok config add-authtoken ${NGROK_AUTHTOKEN}
 ngrok http --url=communal-engaged-mudfish.ngrok-free.app 8080
 ```
+
+### Developers
+
+| [<img src="https://github.com/bapwood.png?size=85" width=85><br><sub>Baptiste Fouillet</sub>](https://github.com/bapwood) | [<img src="https://github.com/sephorah.png?size=85" width=85><br><sub>Séphorah Aniambossou</sub>](https://github.com/sephorah) | [<img src="https://github.com/yasssb.png?size=85" width=85><br><sub>Yasmine BEDRANE</sub>](https://github.com/yasssb) | [<img src="https://github.com/ismadpk.png?size=85" width=85><br><sub>Ismaïel DIAPAKA</sub>](https://github.com/ismadpk)
+| :---: | :---: | :---: | :---: |
+
+**Sephorah** and **Baptiste** were responsible for developing the **application server**, handling user management, authentication, microservices integration, and all other core functionalities.
+
+**Yasmine** has built the **mobile application**, ensuring user-friendly interaction with the application server and AREA setup on mobile devices.
+
+**Ismaïel** has worked on the **web client**, providing users with a responsive and accessible interface to manage their AREAs.
