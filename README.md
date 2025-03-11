@@ -2,13 +2,15 @@
 
 ## Project overview
 
-The AREA (Action-REAction) project is an automation platform inspired by services like IFTTT and Zapier. This platform allows users to connect various digital services by setting up "Actions" and corresponding "REActions" to automate tasks across platforms. Users can create automated workflows (known as AREA) by connecting a triggering event (Action) to a specified outcome (REAction) between supported services, like Google , Github, Spotify etc.
+The AREA (Action-REAction) project is an automation platform inspired by services like IFTTT and Zapier. This platform allows users to connect various digital services by setting up "Actions" and corresponding "REActions" to automate tasks across platforms. Users can create automated workflows (known as AREAs) by connecting a triggering event (Action) to a specified outcome (REAction) between supported services, like Google, Github, Spotify etc.
 
 The project is divided into three main components:
 
-Application Server: Central hub for business logic and service integrations. 
-Web Client: Provides a browser-based interface for users to create, manage, and interact with AREA workflows.
-Mobile Client: Allows users to interact with the platform on mobile devices, mirroring the functionality of the web client.
+**Application Server**: Central hub for business logic and service integrations.
+
+**Web Client**: Provides a browser-based interface for users to create, manage, and interact with AREA workflows.
+
+**Mobile Client**: Allows users to interact with the platform on mobile devices, mirroring the functionality of the web client.
 
 
 ## Preview
